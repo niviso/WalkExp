@@ -1,7 +1,8 @@
+@import './main-components/styling/variables.scss';
 
 .container {
   position: absolute;
-  background-color: rgba(0,0,0,0.1);
+  background: $white;
   display:flex;
   justify-content: center;
   align-items: center;
