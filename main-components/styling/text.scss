@@ -1,0 +1,32 @@
+
+.h1{
+  font-size: 50px;
+  font-family: 'Helvetica';
+  font-weight: 100;
+}
+
+.h2{
+  font-size: 30px;
+  font-family: 'Helvetica';
+  font-weight: 100;
+}
+
+.marginBottomSmall{
+  margin-bottom: 20px;
+}
+.marginTopSmall{
+  margin-top: 20px;
+}
+
+.flexContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+
+.textPrimary{
+  color: orange;
+}
