@@ -8,7 +8,7 @@ import DefaultView from './views/DefaultView/index';
 
 export default class App extends React.Component {
   state = {
-    view: 'default'
+    view: 'Register'
   };
 
   render() {
