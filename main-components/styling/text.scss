@@ -11,6 +11,11 @@
   font-family: 'Helvetica';
 }
 
+.h2{
+  font-size: 20px;
+  font-family: 'Helvetica';
+}
+
 .marginBottomSmall{
   margin-bottom: 20px;
 }
@@ -26,7 +31,15 @@
 
 }
 
-
 .textPrimary{
   color: $primary;
+}
+.textGray{
+  color: $gray;
+}
+.textGrayLight{
+  color: $grayLight;
+}
+.textGrayDark{
+  color: $grayDark;
 }
