@@ -74,11 +74,27 @@ export default class DefaultView extends React.Component {
   };
   render(){
     const currentExp = (this.state.totalSteps/EXP_TABLE[DATA.level - 1]) * 100;
-
+    const ExpLeft = EXP_TABLE[this.state.level + 1] - this.state.totalSteps
     return(
       <View style={styles.container}>
       <View style={styles.StatsPanel}>
-      <Text style={[textStyles.h2,textStyles.marginBottomSmall]}>Level: {this.state.level}</Text>
+        <Text style={[textStyles.h1]}>{DATA.name}</Text>
+        <Text style={[textStyles.h2]}>Level {this.state.level}</Text>
+      </View>
+      <View style={styles.Menu}>
+      <View style={styles.MenuItem}>
+        <Text style={[textStyles.h3, textStyles.textPrimary]}>Home</Text>
+        </View>
+        <View style={styles.MenuItem}>
+          <Text style={[textStyles.h3, textStyles.textWhite]}>Inventory</Text>
+          </View>
+          <View style={styles.MenuItem}>
+            <Text style={[textStyles.h3, textStyles.textWhite]}>Achievements</Text>
+            </View>
+            <View style={styles.MenuItem}>
+              <Text style={[textStyles.h3, textStyles.textWhite]}>Settings</Text>
+              </View>
+
       </View>
         <AnimatedCircularProgress
           size={200}
@@ -90,12 +106,12 @@ export default class DefaultView extends React.Component {
           tintColor="black"
           backgroundColor={"rgba(0,0,0,0.2)"}
         >
-          {currentExp => <Text style={[textStyles.h1,textStyles.textOrange]}>{Math.round(currentExp)}</Text>}
+        {currentExp => <View style={styles.container}><Text style={[textStyles.h1,textStyles.textOrange]}>{Math.round(ExpLeft)}</Text><Text style={[textStyles.h3,textStyles.textGrayDark]}>Steps to level {this.state.level + 1}</Text></View>}
         </AnimatedCircularProgress>
 
         <View style={[textStyles.marginTopSmall,textStyles.flexContainer]}>
         <Text style={[textStyles.textGrayDark,textStyles.h2]}>
-          Total steps:&nbsp;
+          Total steps today:&nbsp;
         </Text>
         <Text style={[textStyles.textPrimary,textStyles.h2]}>
          {this.state.totalSteps}
