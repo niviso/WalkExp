@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^5.1.1",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "private": true
 }
